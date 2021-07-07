@@ -1,0 +1,55 @@
+<mvc:View
+    controllerName="pdfdownload.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+					<Table id="idPDFTable" items="{/Products}">  
+                            <headerToolbar>  
+                                <Toolbar>  
+                                    <Title level="H2" text="PDF Table"/>  
+                                     <ToolbarSpacer></ToolbarSpacer>  
+                                     <Button    icon="sap-icon://download" press="onDataExportPDF" />  
+                                </Toolbar>  
+                            </headerToolbar>  
+                            <columns>  
+                                <Column width="12em">  
+                                    <Text text="Country"/>  
+                                </Column>  
+                                <Column>  
+                                    <Text text="Profit"/>  
+                                </Column>  
+                                <Column>  
+                                    <Text text="Forcast"/>  
+                                </Column>  
+                                <Column>  
+                                    <Text text="Target"/>  
+                                </Column> 
+								<Column>  
+                                    <Text text="Revenue"/>  
+                                </Column>  
+                            </columns>  
+                            <items>  
+                                <ColumnListItem>  
+                                    <cells>  
+                                        <Text text="{Country}"/>  
+                                        <Text text="{Profit}"/>  
+                                        <Text text="{Forcast}"/>  
+                                        <Text text="{Target}"/>
+										<Text text="{Revenue}"/>  
+                                    </cells>  
+                                </ColumnListItem>  
+                            </items>  
+                        </Table>  
+					
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
